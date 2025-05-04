@@ -12,17 +12,34 @@
       color: white;
       font-family: 'Arial', sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-size: 2rem;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      background-color: hotpink;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: deeppink;
     }
   </style>
 </head>
 <body>
-  <p>❤️ Music is playing... Enjoy the vibe! ❤️</p>
+  <p>🎁 Welcome to your birthday surprise!</p>
+  <button onclick="document.getElementById('bg-music').play()">▶️ Play Music</button>
 
-  <audio autoplay loop>
+  <audio id="bg-music" loop>
     <source src="music.mp3" type="audio/mpeg" />
     Your browser does not support the audio tag.
   </audio>
